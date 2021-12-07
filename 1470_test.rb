@@ -4,8 +4,7 @@
 def shuffle(nums, n)
   shuffle_arr = []
   n.times do |inx|
-    shuffle_arr.push(nums[inx], nums[n+inx])
+    shuffle_arr.push(nums[inx], nums[n + inx])
   end
-  return shuffle_arr
+  shuffle_arr
 end
-

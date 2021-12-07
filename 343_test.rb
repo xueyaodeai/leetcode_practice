@@ -8,13 +8,13 @@ def integer_break(n)
   tmp = n
   tmp_max = 1
   while tmp > 4
-    tmp = tmp - 3
-    tmp_max = tmp_max * 3
+    tmp -= 3
+    tmp_max *= 3
   end
   $max[n] = tmp_max * tmp
-  return $max[n]
+  $max[n]
 end
 
 58.times do |i|
-  puts integer_break(i+1)
+  puts integer_break(i + 1)
 end

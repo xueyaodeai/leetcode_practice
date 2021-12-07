@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 # @param {String} s
 # @return {String}
 def sort_string(s)
-	# 生成统计字母出现次数的 hash
+  # 生成统计字母出现次数的 hash
   keys_count = {}
   s.split('').each do |key|
     if keys_count[key].nil?
@@ -10,28 +12,28 @@ def sort_string(s)
       keys_count[key] += 1
     end
   end
-  sorted_keys = keys_count.keys.sort()
-  reverse_sorted_keys = sorted_keys.reverse()
+  sorted_keys = keys_count.keys.sort
+  reverse_sorted_keys = sorted_keys.reverse
 
-	# 进行顺序和逆序的遍历，循环直至两个字符串长度相等
+  # 进行顺序和逆序的遍历，循环直至两个字符串长度相等
   result = []
   origin_length = s.length
   while result.length != origin_length
     sorted_keys.each do |key|
-      if keys_count[key] > 0
+      if (keys_count[key]).positive?
         result.append(key)
         keys_count[key] -= 1
       end
     end
     reverse_sorted_keys.each do |key|
-      if keys_count[key] > 0
+      if (keys_count[key]).positive?
         result.append(key)
         keys_count[key] -= 1
       end
     end
   end
 
-  return result.join('')
+  result.join('')
 end
 
 pp sort_string 'leetcode'
