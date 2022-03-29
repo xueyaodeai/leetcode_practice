@@ -26,10 +26,10 @@ def partition(arr: List, left: int, right: int) -> int:
     return i
 
 
-def swap(arr: List, left: int, right: int):
-    if left == right:
+def swap(arr: List, i: int, j: int):
+    if i == j:
         pass
-    arr[left], arr[right] = arr[right], arr[left]
+    arr[i], arr[j] = arr[j], arr[i]
 
 
 if __name__ == "__main__":
