@@ -1,3 +1,4 @@
+# 冒泡排序
 def bubble_sort(arr)
   (arr.length - 1).times do |i|
     (arr.length - 1 - i).times do |j|
