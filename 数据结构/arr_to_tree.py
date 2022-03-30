@@ -5,6 +5,7 @@ import json
 
 
 def arr_to_tree(arr: List) -> List:
+    root_id = 0
     result = []
     m = {}
     for i in range(len(arr)):
@@ -13,7 +14,7 @@ def arr_to_tree(arr: List) -> List:
 
     for i in range(len(arr)):
         node = arr[i]
-        if int(node["pid"]) != 0:
+        if int(node["pid"]) != root_id:
             m[int(node["pid"])]["children"].append(node)
         else:
             result.append(node)

@@ -34,7 +34,11 @@ def swap(arr: List, i: int, j: int):
 
 if __name__ == "__main__":
     arr = [5, 9, 1, 9, 5, 3, 7, 6, 1]
-    print(quickSort(arr, 0, len(arr)-1))
+    print("result: ", quickSort(arr, 0, len(arr)-1))
+    arr_1 = [0]
+    print("result: ", quickSort(arr_1, 0, len(arr_1)-1))
+    arr_2 = [1, 0]
+    print("result: ", quickSort(arr_2, 0, len(arr_2)-1))
 
 # change:  [5, 1, 1, 9, 5, 3, 7, 6, 9]
 # change:  [5, 1, 1, 3, 5, 9, 7, 6, 9]
