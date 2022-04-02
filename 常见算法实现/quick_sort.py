@@ -29,7 +29,8 @@ def partition(arr: List, left: int, right: int) -> int:
 def swap(arr: List, i: int, j: int):
     if i == j:
         pass
-    arr[i], arr[j] = arr[j], arr[i]
+    else:
+        arr[i], arr[j] = arr[j], arr[i]
 
 
 if __name__ == "__main__":
@@ -60,4 +61,9 @@ if __name__ == "__main__":
 # change:  [1, 1, 3, 5, 5, 6, 7, 9, 9]
 # finish:  [1, 1, 3, 5, 5, 6, 7, 9, 9]
 # 5
-# [1, 1, 3, 5, 5, 6, 7, 9, 9]
+# result:  [1, 1, 3, 5, 5, 6, 7, 9, 9]
+# result:  [0]
+# change:  [1, 0]
+# finish:  [0, 1]
+# 1
+# result:  [0, 1]
