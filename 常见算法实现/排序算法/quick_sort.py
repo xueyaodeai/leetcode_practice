@@ -1,4 +1,5 @@
 # 快速排序
+import random
 from typing import List
 
 
@@ -12,12 +13,14 @@ def quickSort(arr: List, left: int, right: int) -> List:
 
 
 def partition(arr: List, left: int, right: int) -> int:
-    key = arr[left]
+    key = random.randint(left, right)
+    swap(arr, left, key)
+    print("key: ", arr)
     i, j = left, right
     while i < j:
-        while arr[j] >= key and i < j:
+        while arr[j] >= arr[left] and i < j:
             j -= 1
-        while arr[i] <= key and i < j:
+        while arr[i] <= arr[left] and i < j:
             i += 1
         swap(arr, i, j)
         print("change: ", arr)
